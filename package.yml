@@ -1,0 +1,29 @@
+# Basic information
+name: core
+author: lavrahq
+description: The core Response system.
+
+# The Products this package applies to.
+product: response
+
+# The default values for each section.
+defaults:
+  functions:
+    config:
+      limits:
+        memory: 100Mi
+      requests:
+        memory: 40Mi
+
+functions:
+
+  # /api/core/system/about
+  system-about:
+    type: api
+    route: /system/about
+    methods:
+      - GET
+    config:
+      lang: golang-http
+
+settings: []
